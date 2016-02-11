@@ -1,7 +1,11 @@
 class Post < ActiveRecord::Base
 
+	# def to_s
+	# 	self.title
+	# end
+	
 	def lead
-		self.content.first(100)
+		self.content.first(100) + '...'
 	end
 
 	def duplicated(other_post)
@@ -9,6 +13,11 @@ class Post < ActiveRecord::Base
 			"Duplicated"
 		end
 	end
+	# or
+
+	# def ==(other)
+	# 	self.title == other.title	
+	# end
 
 	def by?(check_author)
 		if self.author == check_author.to_s

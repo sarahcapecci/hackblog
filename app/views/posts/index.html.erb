@@ -1,0 +1,15 @@
+<h1>Posts</h1>
+<p>Find me in app/views/posts/index.html.erb</p>
+<ul>
+	<% @posts.each do |post| %>
+	<li>
+		<!-- <h2><a href="<%= post_path(post) %>"> <%= post.title %></a></h2> -->
+		<!-- <h2><%= link_to post.title, post_path(post) %></h2> -->
+		<h2><%= link_to post.title, post %></h2>
+		<p>By <%= post.author %> on <%= post.created_at %></p>
+		<p><%= post.content %></p>
+	</li>
+	<% end %>
+</ul>
+
+<%= link_to "Add post", new_post_path %>

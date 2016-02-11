@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  # can be done for another model
+  resources :posts
+
+  # the root of the application will be this
+  root to: 'posts#index'
+
+  # if you want to remove one action:
+  # resources :posts, except: [:delete]
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
