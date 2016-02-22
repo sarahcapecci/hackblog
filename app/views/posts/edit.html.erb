@@ -1,6 +1,5 @@
-<h2>Create a new post here!</h2>
-<!-- form_tag '/posts', method: "POST" do -->
-<!-- f is being yielded to the block -->
+<h2>Edit this post!</h2>
+
 <%= form_for @post do |f|%>
 	<%= f.label :title %>
 	<%= f.text_field :title, :placeholder => "Title" %>
@@ -13,6 +12,4 @@
 	<%= f.submit :submit %>
 <% end %>
 
-<%= link_to "Back to list", root_path %>
-
-<!-- make signup on hacklaunch like this -->
+<%= link_to "Cancel", root_path %>

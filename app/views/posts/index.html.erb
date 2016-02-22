@@ -8,8 +8,12 @@
 		<h2><%= link_to post.title, post %></h2>
 		<p>By <%= post.author %> on <%= post.created_at %></p>
 		<p><%= post.content %></p>
+		<%= link_to "Edit me", edit_post_path(post) %>
+
 	</li>
 	<% end %>
 </ul>
 
 <%= link_to "Add post", new_post_path %>
+
+<%= link_to "Add User", new_user_path %>

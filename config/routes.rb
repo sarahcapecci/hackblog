@@ -1,6 +1,20 @@
 Rails.application.routes.draw do
+  resources :users
   # can be done for another model
   resources :posts
+  
+
+  # or
+  # resources :posts do
+  #   collection do
+  #     get :search
+  #   end
+  #   # adds a search URL on top of the regular ones
+  #   member do
+  #     get :stats
+  #   end
+  #   # adds a stats URL on top of the regular ones (/posts/id/stats)
+  # end
 
   # the root of the application will be this
   root to: 'posts#index'

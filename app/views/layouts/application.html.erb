@@ -8,6 +8,12 @@
 </head>
 <body>
 
+<h2>Search here:</h2>
+<%= form_tag root_path, method: 'GET' do %>
+	<input type="search" name="query" placeholder="Search posts here">
+	<input type="submit" value="SEARCH NOW">
+<% end %>
+
 <%= yield %>
 
 </body>
